@@ -130,10 +130,10 @@ const Topmenu = () => {
               {/* Right Section */}
               <Col
                 xs={12}
-                md={4}
-                className="text-center text-md-end d-flex justify-content-center justify-content-md-end align-items-center"
+                md={8}
+                className="text-center text-md-end d-flex justify-content-md-end align-items-center"
               >
-                <Nav.Link as={Link} to="/mycart" className="cart-icon">
+                <Nav.Link as={Link} to="/mycart" className="cart-icon" style={{fontSize:"20px"}}>
                   <FaCartShopping />
                   {proLength > 0 && (
                     <Badge bg="danger">{proLength}</Badge>

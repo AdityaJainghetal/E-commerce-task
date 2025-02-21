@@ -51,7 +51,7 @@ const Electronic = () => {
 
   return (
     <>
-      <h1 style={{ color: 'rgb(53, 149, 245)' }}>Men Collections</h1>
+      <h1 style={{ color: 'rgb(53, 149, 245)' }}>Electronic Collections</h1>
       <Container>
         <Row>
           {ans}
