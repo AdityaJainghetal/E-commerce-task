@@ -5,12 +5,13 @@ import { useDispatch } from 'react-redux';
 import { addToCart } from '../productSlice';
 import { Container, Row, Col } from 'react-bootstrap';
 
-const MenCollections = () => {
+const Electronic = () => {
   const [mydata, setMydata] = useState([]);
   const dispatch = useDispatch();
 
   const loadData = async () => {
-   let api = ('https://fakestoreapi.com/products/category/jewelery')
+   let api = 'https://fakestoreapi.com/products/category/electronics'
+  
     try {
       const response = await fetch(api);
       const data = await response.json();
@@ -27,12 +28,12 @@ const MenCollections = () => {
   const ans = mydata.map((key) => {
     return (
       <Col xs={12} sm={6} md={4} lg={3} key={key.id} style={{ marginBottom: '20px' }}>
-        <Card style={{ width: '100%' }}>
+        <Card style={{ width: '100%', textAlign: "center" }}>
           <Card.Img variant="top" src={key.image} height="250" />
           <Card.Body>
             <Card.Title>{key.title}</Card.Title>
             <Card.Text>
-              {key.description}
+           
               <h5>Product for: {key.category}</h5>
               <h4 style={{ color: 'red' }}>Price: {key.price}</h4>
             </Card.Text>
@@ -60,4 +61,4 @@ const MenCollections = () => {
   );
 }
 
-export default MenCollections;
+export default Electronic;

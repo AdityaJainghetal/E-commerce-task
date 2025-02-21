@@ -3,8 +3,10 @@ import Layout from "./Layout";
 import Home from "./pages/Home";
 import MyCart from "./pages/MyCart";
 import CheckOut from "./pages/CheckOut";
-import MenCollections from "./pages/MenCollections";
-import ShowProduct from "./pages/ShowProduct";
+import Jewelery from "./pages/jewelery";
+import Electronic from "./pages/Electronic";
+
+
 
 
 const App=()=>{
@@ -15,9 +17,11 @@ const App=()=>{
           <Route path="/" element={<Layout/>}>
             <Route index element={<Home/>} />
             <Route path="/home" element={<Home/>} />
-            <Route path="mens" element={<MenCollections/>}/>
+       
+            <Route path="jewelery" element={<Jewelery/>} />
+            <Route path="Electronic" element={<Electronic/>}/>
          <Route path="mycart" element={<MyCart/>}/>
-            <Route path="showproduct/:myid" element={<ShowProduct/>} />
+           
             
 
             <Route path="mycart" element={<MyCart/>}/>
