@@ -16,11 +16,15 @@ const Home = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
-  const loadData = () => {
+  const loadData =async () => {
     let api = "https://fakestoreapi.com/products";
-    axios.get(api).then((res) => {
-      setMydata(res.data);
-    });
+    try {
+      const response = await fetch(api);
+      const data = await response.json();
+      setMydata(data);
+    } catch (error) {
+      console.log(error);
+    }
   };
 
   useEffect(() => {
@@ -71,13 +75,13 @@ const Home = () => {
     <>
       <Carousel>
         <Carousel.Item>
-          <img src={b1} width="100%" height="200" alt="First slide" />
+          <img src={b1} width="100%" height="500" alt="First slide" />
         </Carousel.Item>
         <Carousel.Item>
-          <img src={b2} width="100%" height="200" alt="Second slide" />
+          <img src={b2} width="100%" height="500" alt="Second slide" />
         </Carousel.Item>
         <Carousel.Item>
-          <img src={b3} width="100%" height="200" alt="Third slide" />
+          <img src={b3} width="100%" height="500" alt="Third slide" />
         </Carousel.Item>
       </Carousel>
       <h1 style={{ color: 'rgb(53, 149, 245)' }}>Our Premium Products</h1>

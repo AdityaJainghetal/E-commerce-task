@@ -10,7 +10,7 @@ const MenCollections = () => {
   const dispatch = useDispatch();
 
   const loadData = async () => {
-    let api = "https://fakestoreapi.com/products/category/men"; 
+   let api = ('https://fakestoreapi.com/products/category/jewelery')
     try {
       const response = await fetch(api);
       const data = await response.json();
